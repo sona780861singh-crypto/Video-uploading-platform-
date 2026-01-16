@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella's Italian Bistro</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #d32f2f; color: white; text-align: center; padding: 20px; }
+        nav { background-color: #b71c1c; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        section { padding: 20px; max-width: 800px; margin: auto; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+        .menu-item { border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .reservation-form { display: none; }
+        button { background-color: #d32f2f; color: white; border: none; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bella's Italian Bistro</h1>
+        <p>Authentic Italian Cuisine in the Heart of the City</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home">
+        <h2>Welcome</h2>
+        <p>Enjoy fresh pasta, wood-fired pizzas, and more. Open daily from 11 AM to 10 PM.</p>
+        <img src="restaurant-photo.jpg" alt="Restaurant Interior" style="width:100%; max-width:600px;">
+        <button onclick="showReservation()">Make a Reservation</button>
+        <div id="reservation" class="reservation-form">
+            <form action="/submit-reservation" method="post">
+                <label>Name: <input type="text" required></label><br>
+                <label>Date: <input type="date" required></label><br>
+                <label>Time: <input type="time" required></label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <h3>Margherita Pizza</h3>
+            <p>Fresh mozzarella, tomato sauce, basil. $12</p>
+        </div>
+        <div class="menu-item">
+            <h3>Spaghetti Carbonara</h3>
+            <p>Pancetta, eggs, Parmesan. $15</p>
+        </div>
+        <!-- Add more items -->
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Founded in 2010, Bella's brings traditional Italian flavors to your table.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Address: 123 Main St, City, State 12345</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@bellasbistro.com</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Bella's Italian Bistro. All rights reserved.</p>
+    </footer>
+    <script>
+        function showReservation() {
+            document.getElementById('reservation').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
